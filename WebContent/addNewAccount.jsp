@@ -41,24 +41,24 @@
 						<td>Account Type:</td>
 						<td><select id="accountType" name="accountType"
 							onchange="setButton();" required="required">
-								<option value="default" selected="selected">----SELECT----</option>
+								<option value="default" selected="selected">SELECT</option>
 								<option value="savingaccount">Saving Account</option>
 								<option value="currentaccount">Current Account</option>
 						</select></td>
 					</tr>
 					<tr>
 						<td>
-							<div id="sa" style="display: none">
-								<input type="radio" id="salary" name="salary" value="Blue"
+							<div id="savacc" style="display: none">
+								<input type="radio" id="salary" name="salary" value="salaried"
 									onclick="setBalance(this.value);">Salary<input
-									type="radio" id="salary" name="salary" value="Red"
+									type="radio" id="salary" name="salary" value="nonsalaried"
 									onclick="setBalance(this.value);">Not Salaried
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<div id="ca" style="display: none">
+							<div id="curacc" style="display: none">
 								Enter Over Draft Limit:<input type="number" min=0 name="odLimit">
 								Enter account balance:<input type="number" min=10000 name="cbal">
 							</div>
@@ -101,23 +101,23 @@
 		var dropdown = document.getElementById("accountType");
 		var type = dropdown.options[dropdown.selectedIndex].value;
 		if (type == "savingaccount") {
-			document.getElementById("sa").style.display = "block";
-			document.getElementById("ca").style.display = "none";
+			document.getElementById("savacc").style.display = "block";
+			document.getElementById("curacc").style.display = "none";
 		} else if (type == "currentaccount") {
-			document.getElementById("ca").style.display = "block";
-			document.getElementById("sa").style.display = "none";
+			document.getElementById("curacc").style.display = "block";
+			document.getElementById("savacc").style.display = "none";
 		} else if (type == "default") {
-			document.getElementById("sa").style.display = "none";
-			document.getElementById("ca").style.display = "none";
+			document.getElementById("savacc").style.display = "none";
+			document.getElementById("curacc").style.display = "none";
 		}
 	}
 	function setBalance(bal) {
 		switch (bal) {
-		case "Blue":
+		case "salaried":
 			document.getElementById("salbal").style.display = "block";
 			document.getElementById("bal").style.display = "none";
 			break
-		case "Red":
+		case "nonsalaried":
 			document.getElementById("bal").style.display = "block";
 			document.getElementById("salbal").style.display = "none";
 			break
