@@ -1,6 +1,4 @@
 package com.moneymoney.framework.account.pojo;
-
-
 public class PaymentGateway {
 
 	public static boolean transfer(BankAccount sender, BankAccount reciever, double amount) {
