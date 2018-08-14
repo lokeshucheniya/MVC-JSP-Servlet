@@ -1,6 +1,4 @@
 package com.moneymoney.framework.account.pojo;
-
-
 public abstract class CurrentAccount extends BankAccount {
 	private double odLimit;
 
