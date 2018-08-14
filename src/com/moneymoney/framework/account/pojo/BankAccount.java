@@ -1,5 +1,4 @@
 package com.moneymoney.framework.account.pojo;
-
 public abstract class BankAccount {
 	private final int accountNumber;
 	private Customer accountHolder;
