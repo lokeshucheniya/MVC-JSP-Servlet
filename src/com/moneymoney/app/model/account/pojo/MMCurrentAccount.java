@@ -12,7 +12,7 @@ public class MMCurrentAccount extends CurrentAccount {
 	public String withdraw(double amount){
 		String denominations;
 		if(amount <= (this.getAccountBalance() + getOdLimit())) {
-			this.setAccountBalance(this.getAccountBalance()+ getOdLimit() - amount);
+			this.setAccountBalance(this.getAccountBalance() - amount);
 				int thousand = (int)amount/1000;
 				amount = amount%1000;
 				int fiveHundred = (int)amount/500;
