@@ -1,6 +1,5 @@
 package com.moneymoney.framework.account.pojo;
 
-
 public abstract class SavingsAccount extends BankAccount {
 	private boolean salary;
 	private double minBal;
