@@ -148,7 +148,7 @@ public class AppController extends HttpServlet {
 			amount = Double.parseDouble(request.getParameter("depositamount"));
 			serviceImpl.deposit(accNo, amount);
 			request.setAttribute("accNo", accNo);
-			System.out.println(accNo+"  jkbdabk  " +amount);
+			System.out.println(accNo+"  " +amount);
 			dispatcher = request.getRequestDispatcher("displayAccount.app");
 			dispatcher.forward(request, response);
 			break;
