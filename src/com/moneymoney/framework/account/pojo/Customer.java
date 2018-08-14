@@ -1,6 +1,4 @@
 package com.moneymoney.framework.account.pojo;
-
-
 public abstract class Customer {
 	private final int customerId;
 	private String customerName;
